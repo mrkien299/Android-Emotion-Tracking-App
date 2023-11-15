@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".home_activity"
+    tools:layout_editor_absoluteX="-3dp"
+    tools:layout_editor_absoluteY="-31dp">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:layout_editor_absoluteX="-3dp"
+        tools:layout_editor_absoluteY="-31dp" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_anchor="@+id/linearLayout"
+        app:layout_anchorGravity="center"
+        tools:layout_editor_absoluteX="-3dp"
+        tools:layout_editor_absoluteY="-31dp">
+
+        <Button
+            android:id="@+id/history"
+            android:layout_width="250dp"
+            android:layout_height="58dp"
+            android:background="@drawable/rounded_corner"
+            android:onClick="switchActivity"
+            android:text="history"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/liveButton"
+            app:layout_constraintVertical_bias="0.5" />
+
+        <Button
+            android:id="@+id/upload"
+            android:layout_width="250dp"
+            android:layout_height="58dp"
+            android:background="@drawable/rounded_corner"
+            android:onClick="liveActivity"
+            android:text="Upload"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@+id/liveButton"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageView"
+            app:layout_constraintVertical_bias="0.5" />
+
+        <Button
+            android:id="@+id/liveButton"
+            android:layout_width="250dp"
+            android:layout_height="58dp"
+            android:background="@drawable/rounded_corner"
+            android:onClick="switchActivity"
+            android:text="live"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@+id/history"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/upload"
+            app:layout_constraintVertical_bias="0.5" />
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="326dp"
+            android:layout_height="236dp"
+            android:layout_marginStart="42dp"
+            android:layout_marginTop="70dp"
+            android:layout_marginEnd="43dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@mipmap/logo1" />
+
+
+        <!--       <ImageView
+                   android:id="@+id/imageView8"
+                   android:layout_width="340dp"
+                   android:layout_height="266dp"
+                   android:layout_marginStart="46dp"
+                   android:layout_marginTop="46dp"
+                   android:layout_marginEnd="46dp"
+                   android:layout_marginBottom="46dp"
+                   app:layout_constraintBottom_toTopOf="@+id/liveButton"
+                   app:layout_constraintEnd_toEndOf="parent"
+                   app:layout_constraintHorizontal_bias="0.503"
+                   app:layout_constraintStart_toStartOf="parent"
+                   app:layout_constraintTop_toTopOf="parent"
+                   app:srcCompat="@mipmap/era_logo_withtext_under" />
+       -->
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
